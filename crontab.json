@@ -1,0 +1,18 @@
+[
+    {
+        "m":"*",
+        "d":"*",
+        "H":"*",
+        "i":"0",
+        "w":[1,1,1,1,1,1,1],
+        "command":"cd /home/user/www/taoka-toshiaki.com/ && /usr/local/bin/php index.php"
+    },
+    {
+        "m":"*",
+        "d":"*",
+        "H":"*/5",
+        "i":"0",
+        "w":[1,1,1,1,1,1,1],
+        "command":"cd /home/user/www/taoka-toshiaki.com/x/v2/ && /usr/local/bin/php xPost.php 'taoka'"
+    }
+]
