@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('Asia/Tokyo');
+
 class CronExpansion
 {
     private string $filepath = 'crontab.json';
@@ -76,7 +78,7 @@ class CronExpansion
 
             // 1-5
             if (preg_match('/^(\d+)-(\d+)$/', $part, $m)) {
-                if ($now >= $m[1] && $now <= $m[2]) {
+                if ($now >= (int)$m[1] && $now <= (int)$m[2]) {
                     return true;
                 }
             }
@@ -84,7 +86,7 @@ class CronExpansion
             // 1-5/2
             if (preg_match('/^(\d+)-(\d+)\/(\d+)$/', $part, $m)) {
                 for ($i = $m[1]; $i <= $m[2]; $i += $m[3]) {
-                    if ($now === $i) {
+                    if ($now === (int)$i) {
                         return true;
                     }
                 }
